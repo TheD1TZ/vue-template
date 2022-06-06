@@ -1,7 +1,10 @@
-import Home from '../views/Home.vue'
-import NotFound from '../views/NotFound.vue'
+import Daw from '../views/Daw.vue'
+import Vst from '../views/Vst.vue'
+import SamplePack from '../views/SamplePack.vue'
 
 export const routes = [
-  { path: '/', component: Home, meta: { title: 'Home' } },
-  { path: '/:path(.*)', component: NotFound },
+  {path: '/', redirect: '/vst'},
+  {path: '/daw', component: Daw, meta: {title: 'Daw'}},
+  {path: '/vst', component: Vst, meta: {title: 'Vst'}},
+  {path: '/samplepacks', component: SamplePack, meta: {title: 'SamplePacks'}},
 ]
